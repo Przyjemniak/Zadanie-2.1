@@ -1,0 +1,28 @@
+# Mój pierwszy agent — karta obserwacji
+
+- Narzędzie i model: Cursor grok medium 4.6
+- Moje zadanie (2–3 zdania): Agent zbuduje w WPF/.NET 8 prostą aplikację desktopową, w której użytkownik ustawia długość hasła i typy znaków, a następnie generuje losowe hasło z oceną jego siły i możliwością skopiowania go do schowka.
+- Pierwsza wiadomość (wklejona co do znaku): Build a desktop application called "Haslogen" — a random password generator.
+
+Stack — fixed: C# on .NET 8, WPF, Windows. Project "Haslogen" already exists in the current directory, empty. No external NuGet packages unless truly necessary (justify in DECISIONS.md).
+
+Functional requirements:
+
+UI (Polish) lets the user set password length (slider or spinner, 4–64) and toggle character sets: wielkie litery, małe litery, cyfry, znaki specjalne. At least one set must always be selected.
+Button "Generuj" produces a password matching the settings and displays it in a read-only textbox.
+Button "Kopiuj" copies the generated password to clipboard.
+Show a simple strength indicator (słabe / średnie / silne) based on length + variety — you decide the thresholds, record them.
+Remember the last-used settings between runs (any storage format/location — you decide).
+
+Rules:
+
+Do not ask questions; decide unspecified details yourself and log each decision (with the rejected alternative) in DECISIONS.md.
+Done when dotnet build succeeds and dotnet run starts the app — verify yourself.
+Write README.md in Polish: how to run it, what wasn't finished.
+- Co agent zrobił najpierw: I'll start by inspecting the empty Haslogen project and then implement the WPF password generator with settings, generation, copy, and strength display.
+- O co pytał — i co zostało zatwierdzone bez czytania: o nic nie pytal, wszystko zrobil sam
+- Pierwszy błąd i co agent z nim zrobił: nie było bledow
+- Stan po 25 minutach: działa
+- Skąd wiem, że aplikacja działa (co zostało sprawdzone):  sprawdziłem czy wszystkie przyciski dzialaja, czy generator działa, czy kopiowanie dziala
+- Rzeczy, które agent zrobił, a których nie rozumiem: so I’ll scaffold a .NET 8 WPF app in place
+- Jak mi się wydawało, że poszło (jedno zdanie): poszlo swietnie, 0 problemow
